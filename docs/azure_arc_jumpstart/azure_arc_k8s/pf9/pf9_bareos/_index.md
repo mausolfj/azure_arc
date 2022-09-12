@@ -12,13 +12,13 @@ description: >
 
 <p align="center"><img src="/img/jumpstart_friends_logo.png" alt="jumpstart-friends-logo" width="250"></p>
 
-The following Jumpstart scenario will guide on how to deploy a Kubernetes cluster with [Platform9 Managed Kubernetes (PMK)](https://platform9.com/managed-kubernetes/) and have it as a connected Azure Arc Kubernetes resource. With PMK, you can have your clusters deployed on-premises, in public clouds, or at the edge. In this document, we'll explain the steps on how to create an **on-premise [BareOS](https://platform9.com/docs/kubernetes/bareos-what-is-bareos) cluster** using **PMK** and connect it to **Microsoft Azure Arc**.
+The following Jumpstart scenario is a guide to deploy a Kubernetes cluster with [Platform9 Managed Kubernetes (PMK)](https://platform9.com/managed-kubernetes/) and have it as a connected Azure Arc Kubernetes resource. With PMK, you can have your clusters deployed on-premises, in public clouds, or at the edge. In this document, we'll explain how to create an **on-premise [BareOS](https://platform9.com/docs/kubernetes/bareos-what-is-bareos) cluster** using **PMK** and connect it to **Microsoft Azure Arc**.
 
 ## Prerequisites
 
-- An Ubuntu 20.04 installed physical machine or VM. In this scenario, we would be using single node kubernetes cluster installation. This machine would also act as our management host.
+- An Ubuntu 20.04 installed physical machine or VM. In this scenario, we will be using single node kubernetes cluster installation. This machine will also act as our management host.
 
-- The [kubectl](https://platform9.com/learn/tutorials/kubectl) executable binary for local cluster management. If you would want to have a separate host for cluster management, follow the below steps to [install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management) on it.
+- The [kubectl](https://platform9.com/learn/tutorials/kubectl) executable binary for local cluster management. If you want to have a separate host for cluster management, follow the below steps to [install kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-native-package-management) on it.
 
   ```shell
   sudo apt-get update
@@ -29,7 +29,7 @@ The following Jumpstart scenario will guide on how to deploy a Kubernetes cluste
   sudo apt-get install -y kubectl
   ```
 
-  > **NOTE: The *kubectl* package is installed from the Kubernetes repository, hence the Google Cloud public signing key need to be downloaded to enable the repository. Note: All PMK cluster nodes would have kubectl installed once the cluster is deployed.**
+  > **NOTE: The *kubectl* package is installed from the Kubernetes repository, hence the Google Cloud public signing key needs to be downloaded to enable the repository. Note: All PMK cluster nodes will have kubectl installed once the cluster is deployed.**
 
 - [Install or update Azure CLI (az) to version 2.25.0 and above](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 
